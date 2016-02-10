@@ -22,6 +22,7 @@ var ReactPerf = require('ReactPerf');
 var ReactReconciler = require('ReactReconciler');
 var ReactUpdates = require('ReactUpdates');
 var ReactVersion = require('ReactVersion');
+var ReactEventListener = require('ReactEventListener');
 
 var findDOMNode = require('findDOMNode');
 var renderSubtreeIntoContainer = require('renderSubtreeIntoContainer');
@@ -36,6 +37,7 @@ var React = {
   render: render,
   unmountComponentAtNode: ReactMount.unmountComponentAtNode,
   version: ReactVersion,
+  onUnhandledError: ReactEventListener.onUnhandledError,
 
   /* eslint-disable camelcase */
   unstable_batchedUpdates: ReactUpdates.batchedUpdates,
